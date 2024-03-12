@@ -12,7 +12,7 @@
 
     <h1>Cadastro de Usuarios</h1>
 
-    <form action="" method="post">
+    <form action="usuario_controller.php" method="post">
 
         <fieldset>
             <legend>Dados de Acesso</legend>
@@ -52,7 +52,7 @@
 
             <p>
                 <label for="complemento">Complemento: </label>
-                <input type="text" name="omplemento" id="omplemento">
+                <input type="text" name="complemento" id="complemento">
             </p>
             <p>
                 <label for="bairro">Bairro: </label>
@@ -115,25 +115,25 @@
             
             <p>
                 <label>
-                    <input type="checkbox" name="cursos" id="Informática Básica">
+                    <input type="checkbox" name="cursos[]" id="Informática Básica" value="Informática Básica">
                     Informática Básica
                 </label>
             </p>
             <p>    
                 <label>
-                    <input type="checkbox" name="cursos" id="PHP">
+                    <input type="checkbox" name="cursos[]" id="PHP" value="PHP">
                     PHP
                 </label>
             </p>
             <p>   
                 <label>
-                    <input type="checkbox" name="cursos" id="HTML 5 & CSS">
+                    <input type="checkbox" name="cursos[]" id="HTML 5 & CSS" value="HTML 5 & CSS">
                     HTML 5 & CSS
                 </label>
             </p>
             <p>    
                 <label>
-                    <input type="checkbox" name="cursos" id="Javascript">
+                    <input type="checkbox" name="cursos[]" id="Javascript" value="Javascript">
                     Javascript
                 </label>
             </p>
@@ -152,7 +152,7 @@
             </label>
         </p>
         <p>
-            <input type="submit" value="Cadastrar">
+            <!-- <input type="submit" value="Cadastrar"> -->
             <button type="submit">Cadastrar</button>
         </p>
 
