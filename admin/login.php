@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+$email = 'nathan@gmail.com';
+$senha = '123456';
+$nome = 'Mestre Nathan';
+
 if (isset($_SESSION['logado'])) {
 
     if ($_SESSION['logado'] == true) {
@@ -11,7 +15,7 @@ if (isset($_SESSION['logado'])) {
 
 if (isset($_COOKIE['lembrar'])) {
 
-    if ($_COOKIE['logado'] == $email) {
+    if ($_COOKIE['lembrar'] == $email) {
         $_SESSION['nome'] = $nome;
         $_SESSION['logado'] = true;
         header('location: dashboard.php');
@@ -19,9 +23,6 @@ if (isset($_COOKIE['lembrar'])) {
     }
 }
 
-$email = 'nathan@gmail.com';
-$senha = '123456';
-$nome = 'Mestre Nathan';
 
 if (isset($_POST['btnEntrar'])) {
     if ($email == $_POST['email'] && $senha == $_POST['senha']) {
